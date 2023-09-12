@@ -7,6 +7,8 @@ import Contact from "./Pages/Contact";
 import Work from "./Pages/Work";
 import { useEffect, useState } from "react";
 import Cursor from "./Components/CommonComponents/Cursor";
+import Jaishreeram from "./Pages/Jaishreeram";
+import Logo from "./Components/CommonComponents/Logo";
 
 function App() {
   const [scrollTop, setScrollTop] = useState(0);
@@ -23,15 +25,15 @@ function App() {
     };
   }, []);
 
+  // const navigate = useNavigate();
+
   return (
     <div>
-      <div className="fixed top-5 left-10">
-        <Typography className="text-orange-400">LOGO</Typography>
-      </div>
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<Dashboard scrollTop={scrollTop} />} />
-          <Route path="/who" element={<Who />} />
+            <Route path="/" element={<Dashboard scrollTop={scrollTop} />} />
+            <Route path="/who" element={<Who />} />
+            <Route path="/jaiShreeRam" element={<Jaishreeram />} />
         </Routes>
       </BrowserRouter>
 
