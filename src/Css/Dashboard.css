@@ -7,10 +7,10 @@
 }
 
 .developer:hover {
-  animation: bounce 0.24s;
+  animation: bounces 0.24s;
 }
 
-@keyframes bounce {
+@keyframes bounces {
   0% {
     transform: scale(1, 1);
   }
@@ -41,7 +41,6 @@
 }
 
 .navbar {
-  /* background-color: yellow; */
   animation: fromUp 3s ease-in-out;
 }
 
@@ -49,10 +48,8 @@
   0% {
     position: relative;
     top: -7vh;
-    /* left: 40vw; */
   }
-  50%{
+  50% {
     top: 4vh;
   }
-  
 }
