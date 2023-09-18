@@ -12,7 +12,7 @@ const Dashboard = ({ scrollTop }) => {
     <>
       {/* bg-[#5F758E] */}
       <Logo />
-      <div className="w-full h-[100vh] background bg-[#DEDBE6]">
+      <div className="w-full h-[100vh] background bg-[#ffffff]">
         <Navbar />
         <div className="h-[90vh] w-full flex px-[5vw] py-[5rem]  ">
           <div className="w-[65vw] h-full">

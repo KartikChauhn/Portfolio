@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 
 
 const Navbar = () => {
-  // const navigate = useNavigate();
+  const navigate = useNavigate();
   const navigation = [
     { name: "INTRO", route: "/", key: "1" },
     { name: "WHO", route: "/who", key: "3" },
@@ -21,7 +21,7 @@ const Navbar = () => {
             <div
               className="h-full transition-all hover:mx-1 navbar relative top-[2vh]"
               key={data.key}
-              // onClick={() => navigate(data.route)}
+              onClick={() => navigate(data.route)}
             >
               <Typography className=" text-black tracking-[0.2rem] text-[0.6rem] font-semibold transition-all hover:-m-1 hover:text-orange-400">
                 {data.name}

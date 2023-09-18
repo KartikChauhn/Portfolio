@@ -1,28 +1,32 @@
 import React from "react";
-import { createRoot } from "react-dom/client";
-import { useRef, useState } from "react";
+
 import { Canvas, useFrame } from "@react-three/fiber";
 import { OrbitControls, PerspectiveCamera } from "@react-three/drei";
-
 import Scene from "../../public/Ramji/Scene.jsx";
 import { DownOutlined } from "@ant-design/icons";
 import { useNavigate } from "react-router-dom";
-import { Typography } from "antd";
 
 const Jaishreeram = () => {
   const navigate = useNavigate();
   return (
-    <div className="h-[100vh] w-full flex justify-between bg-[#DEDBE6]">
+    <div className="h-[100vh] w-full flex justify-between bg-[#E8D0F9]">
       <div className=" w-full h-full  ">
         <Canvas>
           <PerspectiveCamera makeDefault position={[0, 0, 3]} />
           <OrbitControls />
-          <ambientLight color intensity={1.2} />
-          <pointLight position={[10, 10, 10]} color="black" />
+          <ambientLight intensity={10.2} />
+          {/* <pointLight position={[0, 0, 0]} />  */}
+          <pointLight position={[0, 0, 0.5]} intensity={2} color={[40, 40, 5]} />
+
           <Scene position={[0, -1, -0.3]} />
-          <mesh rotation={[-90 * (Math.PI / 180), 0, 0]} position={[0, -1, 0]}>
-            <planeGeometry args={[40, 40]} />
-            <meshStandardMaterial color={"#DEDBE6"} />
+          <mesh
+            rotation={[-90 * (Math.PI / 180), 0, 0]}
+            position={[0, -1, 0]}
+            castShadow
+            receiveShadow
+          >
+            <planeGeometry args={[40, 40]} castShadow receiveShadow />
+            <meshStandardMaterial color={"#9974ff"} castShadow receiveShadow />
           </mesh>
         </Canvas>
       </div>

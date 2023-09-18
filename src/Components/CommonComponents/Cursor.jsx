@@ -4,7 +4,6 @@ import cursor from "./../../assets/cursor.png";
 
 const Cursor = () => {
   const { x, y } = useMousePosition();
-  console.log(x, y);
   return (
     <div
       className="absolute z-50 w-[26px] h-[26px] rounded-full border border-[#000000] shadow-md transition"
@@ -16,6 +15,3 @@ const Cursor = () => {
 };
 
 export default Cursor;
-
-
-

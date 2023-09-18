@@ -41,7 +41,7 @@
 }
 
 .navbar {
-  animation: fromUp 3s ease-in-out;
+  animation: fromUp 1.6s ease-in-out;
 }
 
 @keyframes fromUp {

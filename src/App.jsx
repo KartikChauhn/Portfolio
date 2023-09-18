@@ -33,6 +33,7 @@ function App() {
         <Routes>
             <Route path="/" element={<Dashboard scrollTop={scrollTop} />} />
             <Route path="/who" element={<Who />} />
+            <Route path="/work" element={<Work />} />
             <Route path="/jaiShreeRam" element={<Jaishreeram />} />
         </Routes>
       </BrowserRouter>
