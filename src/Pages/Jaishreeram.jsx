@@ -9,14 +9,23 @@ import { useNavigate } from "react-router-dom";
 const Jaishreeram = () => {
   const navigate = useNavigate();
   return (
-    <div className="h-[100vh] w-full flex justify-between bg-[#E8D0F9]">
+    <div className="h-[100vh] w-full flex justify-between bg-[#7DA1A7]">
       <div className=" w-full h-full  ">
         <Canvas>
-          <PerspectiveCamera makeDefault position={[0, 0, 3]} />
+          <PerspectiveCamera makeDefault position={[2.4, 0.6, 2]} />
           <OrbitControls />
-          <ambientLight intensity={10.2} />
+          <ambientLight intensity={1} color={[1,1,1]} />
           {/* <pointLight position={[0, 0, 0]} />  */}
-          <pointLight position={[0, 0, 0.5]} intensity={2} color={[40, 40, 5]} />
+          <pointLight
+            position={[0, 0.5, 0.5]}
+            intensity={2}
+            color={[0.3, 1, 0.7]}
+          />
+          <pointLight
+            position={[0, -0.7, 0.5]}
+            intensity={0.2}
+            color={[0.3, 1, 0.7]}
+          />
 
           <Scene position={[0, -1, -0.3]} />
           <mesh
@@ -25,8 +34,8 @@ const Jaishreeram = () => {
             castShadow
             receiveShadow
           >
-            <planeGeometry args={[40, 40]} castShadow receiveShadow />
-            <meshStandardMaterial color={"#9974ff"} castShadow receiveShadow />
+            <planeGeometry args={[200, 200]} />
+            <meshStandardMaterial color={[0.5,0.9,1]} />
           </mesh>
         </Canvas>
       </div>
