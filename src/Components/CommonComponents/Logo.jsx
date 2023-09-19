@@ -6,9 +6,9 @@ const Logo = () => {
   const navigate = useNavigate();
   return (
     <div>
-      <div className="fixed top-5 left-5 sm:left-10">
+      <div className="fixed top-5 right-5 sm:right-10">
         <Typography
-          className="text-black text-[1.2rem] border-b-2 border-black italic"
+          className="text-[#c9dcff] text-[1.2rem] border-b-2 border-[#c9dcff] italic"
           onClick={() => {
             navigate("/jaiShreeRam");
           }}

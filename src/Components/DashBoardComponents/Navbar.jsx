@@ -13,7 +13,7 @@ const Navbar = () => {
     { name: "WHAT", route: "/what", key: "4" },
   ];
   return (
-    <div className="w-full h-[10vh] flex justify-between items-center px-10">
+    <div className="w-full h-[10vh] flex justify-between items-center px-10 bg-black">
       <div></div>
       <div className="hidden sm:flex gap-6 relative ">
         {navigation.map((data) => {
@@ -23,7 +23,7 @@ const Navbar = () => {
               key={data.key}
               onClick={() => navigate(data.route)}
             >
-              <Typography className=" text-black tracking-[0.2rem] text-[0.6rem] font-semibold transition-all hover:-m-1 hover:text-orange-400">
+              <Typography className=" text-[#c9dcff] tracking-[0.2rem] text-[0.6rem] font-semibold transition-all hover:-m-1 hover:text-orange-400">
                 {data.name}
               </Typography>
             </div>
@@ -31,12 +31,11 @@ const Navbar = () => {
         })}
       </div>
       <div>
-        <Typography
-          className="text-black hidden sm:flex tracking-[0.1rem] text-[0.8rem] transition-all"
-          // onClick={() => navigate("/contact")}
+        {/* <Typography
+          className="text-white hidden sm:flex tracking-[0.1rem] navbar text-[0.8rem] transition-all"
         >
           Contact
-        </Typography>
+        </Typography> */}
       </div>
     </div>
   );
