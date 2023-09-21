@@ -5,7 +5,7 @@ import { Reflector, Text, useTexture } from "@react-three/drei";
 
 const NameReflection = () => {
   return (
-    <div className="h-[90vh]">
+    <div className="h-[110vh] ">
       <Canvas
         concurrent
         gl={{ alpha: false }}
@@ -42,7 +42,7 @@ function VideoText(props) {
   return (
     <Text
       font="/Inter-Bold.woff"
-      fontSize={2.2}
+      fontSize={1.8}
       letterSpacing={-0.06}
       {...props}
     >
@@ -72,6 +72,7 @@ function Ground() {
       mixBlur={6}
       mixStrength={1.5}
       rotation={[-Math.PI / 2, 0, Math.PI / 2]}
+      position={[0, 0.4, 0]}
     >
       {(Material, props) => (
         <Material
