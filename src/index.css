@@ -3,10 +3,15 @@
 @tailwind utilities;
 
 * {
-  cursor: none;
+  /* cursor: none; */
   box-sizing: border-box;
 }
 
 ::-webkit-scrollbar {
   width: 0px;
 }
+
+.headingFont {
+  font-family: 'Cormorant Garamond', serif;
+}
+  

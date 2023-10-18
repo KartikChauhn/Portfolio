@@ -4,16 +4,17 @@ import { Canvas, useFrame } from "@react-three/fiber";
 import { Reflector, Text, useTexture } from "@react-three/drei";
 
 const NameReflection = () => {
+  const fovValue = window.innerWidth > 650 ? 15 : 55;
   return (
-    <div className="h-[110vh] ">
+    <div className="h-[100vh] sm:h-[110vh] ">
       <Canvas
         concurrent
         gl={{ alpha: false }}
         pixelRatio={[1, 1.5]}
-        camera={{ position: [0, 3, 100], fov: 15 }}
+        camera={{ position: [0, 3, 100], fov: fovValue }}
       >
-        <color attach="background" args={["black"]} />
-        <fog attach="fog" args={["black", 15, 20]} />
+        <color attach="background" args={["#1a224b"]} />
+        <fog attach="fog" args={["#1a224b", 15, 25]} />
         <Suspense fallback={null}>
           <group position={[0, -1, 0]}>
             <VideoText position={[0, 1.2, -2]} />
@@ -32,7 +33,7 @@ const NameReflection = () => {
 function VideoText(props) {
   const [video] = useState(() =>
     Object.assign(document.createElement("video"), {
-      src: "/drei.mp4",
+      src: "/random.mp4",
       crossOrigin: "Anonymous",
       loop: true,
       muted: true,
@@ -67,7 +68,7 @@ function Ground() {
     <Reflector
       blur={[400, 100]}
       resolution={512}
-      args={[20, 20]}
+      args={[25, 25]}
       mirror={0.5}
       mixBlur={6}
       mixStrength={1.5}

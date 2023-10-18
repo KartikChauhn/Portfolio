@@ -3,12 +3,11 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "../../Css/Dashboard.css";
 
-const Navbar = ({ scrollTop }) => {
+const Navbar = ({ scrollTop, textColor }) => {
   const navigate = useNavigate();
 
   const navigation = [
-    { name: "INTRO", route: "/", key: "1" },
-    { name: "WHO", route: "/who", key: "3" },
+    { name: "INTRO", route: "/intro", key: "1" },
     { name: "WORK", route: "/work", key: "2" },
     { name: "WHAT", route: "/what", key: "4" },
   ];
@@ -17,11 +16,11 @@ const Navbar = ({ scrollTop }) => {
       <div
         className={`w-full fixed top-0 left-0 z-[50] ${
           scrollTop > 50
-            ? "h-[100vh]  bg-[#111111a4] "
+            ? "h-[100vh]   backdrop-blur-sm "
             : "h-[10vh] bg-transparent"
         }  flex justify-around items-center px-10  transition-all duration-1000`}
       >
-        <div className={`hidden sm:flex gap-6 relative `}>
+        <div className={` flex gap-10 relative  `}>
           {navigation.map((data) => {
             return (
               <div
@@ -32,11 +31,11 @@ const Navbar = ({ scrollTop }) => {
                 onClick={() => navigate(data.route)}
               >
                 <Typography
-                  className={`text-[#ffffff] tracking-[0.2rem] ${
+                  className={`tracking-[0.2rem] text-white cursor-pointer ${
                     scrollTop > 50
-                      ? "text-[5rem] mx-5 my-0"
-                      : "text-[0.6rem] font-semibold"
-                  }  transition-all hover:text-orange-400 duration-700 `}
+                      ? "text-[2rem] sm:text-[5rem] mx-5 my-0"
+                      : "text-[0.7rem] sm:text-[0.6rem] font-semibold"
+                  }  transition-all duration-700 `}
                   u
                 >
                   {data.name}

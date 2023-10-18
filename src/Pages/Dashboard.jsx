@@ -15,7 +15,7 @@ const Dashboard = ({ scrollTop }) => {
     <>
       <Logo />
       <div className="w-full h-[100vh] background bg-black">
-        <Navbar scrollTop={scrollTop} />
+        <Navbar scrollTop={scrollTop} textColor={"#ffffff"} />
         <NameReflection />
       </div>
     </>
